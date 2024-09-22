@@ -14,7 +14,7 @@ const observer = new MutationObserver((mutationsList, observer) => {
     (mutation) => mutation.type === "childList"
   )
   if (!containsChildList) {
-    console.log("No childList mutation")
+    // console.log("No childList mutation")
     return
   }
 
@@ -68,5 +68,5 @@ const target = document.querySelector("#__next")
 if (target) {
   observer.observe(target, { subtree: true, childList: true })
 } else {
-  console.log("Target not found")
+  // console.log("Target not found")
 }
