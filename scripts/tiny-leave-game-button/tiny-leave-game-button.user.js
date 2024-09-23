@@ -19,14 +19,6 @@ const debugLog = (message) => {
 }
 
 const observer = new MutationObserver((mutationsList, observer) => {
-  const containsChildList = mutationsList.some(
-    (mutation) => mutation.type === "childList"
-  )
-  if (!containsChildList) {
-    debugLog("No childList mutation")
-    return
-  }
-
   const overlay = document.querySelector(
     'div[class^="game-menu_inGameMenuOverlay__"]'
   )
